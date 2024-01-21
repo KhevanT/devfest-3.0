@@ -11,14 +11,14 @@ public class PlayerStateHandler : MonoBehaviour
     {
         plrAlchHandler.ReactPlayerWithBlock(ref this.plrState, ref block.blckState);
 
-        return new PlayerState();
+        return this.plrState;
     }
 
     public PlayerState InteractWith(ref BlockStateHandler orb)
     {
         plrAlchHandler.InteractPlayerWithOrb(ref this.plrState, ref orb.blckState);
 
-        return new PlayerState();
+        return this.plrState;
     }
 
     void Start()
