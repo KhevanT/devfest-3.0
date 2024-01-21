@@ -12,12 +12,12 @@ public class Level : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //level = new char[width, height];
-        level = new char[,]{ {' ', ' ', ' ', ' ', ' '}, 
+        level = new char[width, height];
+        /*level = new char[,]{ {' ', ' ', ' ', ' ', ' '}, 
                     {' ', ' ', 'O', ' ', ' '}, 
                     {'O', ' ', ' ', ' ', ' '}, 
                     {' ', ' ', ' ', 'O', ' '},    
-                    {'O', ' ', ' ', ' ', ' '} };
+                    {'O', ' ', ' ', ' ', ' '} };*/
         CreateLevelInGame();
     }
 
@@ -54,8 +54,46 @@ public class Level : MonoBehaviour
         level[x, y] = c;
     }
 
+    public void pushLeft(int x, int y) {
+        if (x > 0) {
+            Set(x - 1, y, Get(x, y));
+            Set(x, y, ' ');
+        }
+    }
+
+    public void pushRight(int x, int y)
+    {
+        if (x < width - 1)
+        {
+            Set(x + 1, y, Get(x, y));
+            Set(x, y, ' ');
+        }
+    }
+
+    public void pushUp(int x, int y)
+    {
+        if (y < height - 1)
+        {
+            Set(x, y + 1, Get(x, y));
+            Set(x, y, ' ');
+        }
+    }
+
+    public void pushDown(int x, int y)
+    {
+        if (y > 0)
+        {
+            Set(x, y - 1, Get(x, y));
+            Set(x, y, ' ');
+        }
+    }
+
     // need help with this method.
     void CreateLevelInGame() { 
         
     }
+
+    /* char[,] levelFromString(string level) { 
+        
+    } */
 }

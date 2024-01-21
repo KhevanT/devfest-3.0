@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Level level;
     public int x, y;
     float targetX, targetY;
     public float speed;
     bool canMove = true;
-    public Level level;
 
     private void Start()
     {
         transform.position = new Vector2(x * level.tileLength + 0.5f, y * level.tileLength + 0.5f);
         targetX = transform.position.x;
         targetY = transform.position.y;
+        Debug.Log(transform.position);
+        Debug.Log(targetX + " " + targetY);
     }
 
     private void Update()
@@ -33,7 +35,15 @@ public class PlayerMovement : MonoBehaviour
                 new Vector2(targetX, targetY), t);
         }
 
-        if (Input.GetKeyDown("a") && canMove && level.CanPlayerMoveLeft(x, y)) {
+        doInput();
+
+        Debug.Log(transform.position);
+        Debug.Log(targetX + " " + targetY);
+    }
+
+    private void doInput() {
+        if (Input.GetKeyDown("a") && canMove && level.CanPlayerMoveLeft(x, y))
+        {
             targetX = transform.position.x - level.tileLength;
         }
         if (Input.GetKeyDown("d") && canMove && level.CanPlayerMoveRight(x, y))
