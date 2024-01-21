@@ -54,8 +54,11 @@ public class PushableBlock : MonoBehaviour
             }
             else
             {
-                targetX = playerMovement.targetX + level.tileLength;
-                level.pushRight(x, y);
+                if (playerMovement.targetX == transform.position.x && playerMovement.targetY == transform.position.y)
+                {
+                    targetX = playerMovement.targetX + level.tileLength;
+                    level.pushRight(x, y);
+                }
             }
         }
 
@@ -68,8 +71,11 @@ public class PushableBlock : MonoBehaviour
             }
             else
             {
-                targetX = playerMovement.targetX - level.tileLength;
-                level.pushLeft(x, y);
+                if (playerMovement.targetX == transform.position.x && playerMovement.targetY == transform.position.y)
+                {
+                    targetX = playerMovement.targetX - level.tileLength;
+                    level.pushLeft(x, y);
+                }
             }
         }
 
@@ -82,8 +88,11 @@ public class PushableBlock : MonoBehaviour
             }
             else
             {
-                targetY = playerMovement.targetY + level.tileLength;
-                level.pushUp(x, y);
+                if (playerMovement.targetX == transform.position.x && playerMovement.targetY == transform.position.y)
+                {
+                    targetY = playerMovement.targetY + level.tileLength;
+                    level.pushUp(x, y);
+                }
             }
         }
 
@@ -96,8 +105,11 @@ public class PushableBlock : MonoBehaviour
             }
             else
             {
-                targetY = playerMovement.targetY - level.tileLength;
-                level.pushDown(x, y);
+                if (playerMovement.targetX == transform.position.x && playerMovement.targetY == transform.position.y)
+                {
+                    targetY = playerMovement.targetY - level.tileLength;
+                    level.pushDown(x, y);
+                }
             }
         }
 
