@@ -7,9 +7,16 @@ public class PlayerStateHandler : MonoBehaviour
     private AlchemyHandler plrAlchHandler;
     public PlayerState plrState;
 
-    public PlayerState ReactWith(BlockStateHandler block)
+    public PlayerState ReactWith(ref BlockStateHandler block)
     {
         plrAlchHandler.ReactPlayerWithBlock(ref this.plrState, ref block.blckState);
+
+        return new PlayerState();
+    }
+
+    public PlayerState InteractWith(ref BlockStateHandler orb)
+    {
+        plrAlchHandler.InteractPlayerWithOrb(ref this.plrState, ref orb.blckState);
 
         return new PlayerState();
     }
