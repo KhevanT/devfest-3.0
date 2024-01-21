@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 217425261643346842}
   - component: {fileID: 3063213709373846803}
+  - component: {fileID: 7357844213883645806}
+  - component: {fileID: 7898353895958823201}
   - component: {fileID: 4245119620787153769}
   m_Layer: 0
   m_Name: Player Slime
@@ -27,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6574586165987313439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4, y: -3.47, z: 0}
+  m_LocalPosition: {x: 0.5, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85,6 +87,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7357844213883645806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6574586165987313439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6524f2293ae177a4eaa8d5fad306fd6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plrState: 0
+--- !u!114 &7898353895958823201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6574586165987313439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09db5748a6954d4684cd66540e53d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: {fileID: 0}
+  x: 0
+  y: 3
+  speed: 5
 --- !u!95 &4245119620787153769
 Animator:
   serializedVersion: 5
