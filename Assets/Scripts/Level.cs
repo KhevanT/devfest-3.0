@@ -12,12 +12,12 @@ public class Level : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //level = new char[width, height];
-        level = new char[,]{ {' ', ' ', ' ', ' ', ' '}, 
+        level = new char[width, height];
+        /*level = new char[,]{ {' ', ' ', ' ', ' ', ' '}, 
                     {' ', ' ', 'O', ' ', ' '}, 
                     {'O', ' ', ' ', ' ', ' '}, 
                     {' ', ' ', ' ', 'O', ' '},    
-                    {'O', ' ', ' ', ' ', ' '} };
+                    {'O', ' ', ' ', ' ', ' '} };*/
         CreateLevelInGame();
     }
 
@@ -46,16 +46,54 @@ public class Level : MonoBehaviour
     }
 
     public char Get(int x, int y) {
-        return level[x, y];
+        return level[y, x];
     }
     
     public void Set(int x, int y, char c)
     {
-        level[x, y] = c;
+        level[y, x] = c;
+    }
+
+    public void pushLeft(int x, int y) {
+        if (CanPlayerMoveLeft(x, y)) {
+            Set(x - 1, y, Get(x, y));
+            Set(x, y, ' ');
+        }
+    }
+
+    public void pushRight(int x, int y)
+    {
+        if (CanPlayerMoveRight(x, y))
+        {
+            Set(x + 1, y, Get(x, y));
+            Set(x, y, ' ');
+        }
+    }
+
+    public void pushUp(int x, int y)
+    {
+        if (CanPlayerMoveUp(x, y))
+        {
+            Set(x, y + 1, Get(x, y));
+            Set(x, y, ' ');
+        }
+    }
+
+    public void pushDown(int x, int y)
+    {
+        if (CanPlayerMoveDown(x, y))
+        {
+            Set(x, y - 1, Get(x, y));
+            Set(x, y, ' ');
+        }
     }
 
     // need help with this method.
     void CreateLevelInGame() { 
         
     }
+
+    /* char[,] levelFromString(string level) { 
+        
+    } */
 }
