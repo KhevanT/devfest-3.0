@@ -12,7 +12,7 @@ public class Level : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        level = new char[width, height];
+        level = new char[height, width];
         /*level = new char[,]{ {' ', ' ', ' ', ' ', ' '}, 
                     {' ', ' ', 'O', ' ', ' '}, 
                     {'O', ' ', ' ', ' ', ' '}, 
