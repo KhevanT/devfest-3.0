@@ -103,6 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plrState: 0
+  playerAnimControl: {fileID: 4245119620787153769}
+  crateAnimControl: {fileID: 2538039228721522636, guid: 5864c1db8dc941e42a6c9342e6ace759, type: 3}
 --- !u!114 &7898353895958823201
 MonoBehaviour:
   m_ObjectHideFlags: 0

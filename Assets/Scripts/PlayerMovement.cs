@@ -24,14 +24,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // Khevan: please use CheckCollision() to see if movement can proceed!!
+
         if (transform.position.x == targetX && transform.position.y == targetY)
         {
             canMove = true;
             x = (int)(transform.position.x - 0.5f)/level.tileLength;
             y = (int)(transform.position.y - 0.5f)/level.tileLength;
         }
-        
-        else {
+        else // Khevan: I believe the collision error is happening here, i dont think code ever enters this else block
+        {
             canMove = false;
             float t = Time.deltaTime * speed;
             transform.position = Vector2.MoveTowards(transform.position,
@@ -62,5 +64,17 @@ public class PlayerMovement : MonoBehaviour
         {
             targetY = transform.position.y - level.tileLength;
         }
+    }
+
+    // Khevan: new function that checks if there are any collisions in next move 
+    // returns if you can proceed
+    private bool checkCollision()
+    {
+        bool proceed = true;
+
+        // < write code to check for collision based on level > 
+        // try using OnCollisionEnter2D(Collision2D collision) ?
+
+        return proceed;
     }
 }
