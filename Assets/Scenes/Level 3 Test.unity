@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &167293700
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 217425261643346842, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 217425261643346842, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 217425261643346842, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 217425261643346842, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 217425261643346842, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 217425261643346842, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 217425261643346842, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 217425261643346842, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 217425261643346842, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 217425261643346842, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574586165987313439, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
+      propertyPath: m_Name
+      value: Player Slime
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 236e5da7ee4e51244b18915c39840c2d, type: 3}
 --- !u!1 &391225441
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +560,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.14509805, g: 0.07450981, b: 0.10196079, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3141,3 +3198,4 @@ SceneRoots:
   - {fileID: 1113428615}
   - {fileID: 3866120550835523889}
   - {fileID: 2060316000}
+  - {fileID: 167293700}
